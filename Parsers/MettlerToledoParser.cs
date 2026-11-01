@@ -12,6 +12,13 @@ namespace ScalesComponent.Parsers
     /// S = stable, US = unstable
     /// Скорость: 9600, 8N1
     /// </summary>
+    /// <remarks>
+    /// ⚠️ ВНИМАНИЕ: Этот парсер реализован на основе официальной документации 
+    /// производителя и НЕ был физически протестирован на реальном оборудовании.
+    /// Перед использованием в промышленной эксплуатации рекомендуется провести 
+    /// верификацию на вашей конкретной модели весов.
+    /// См. TESTING_STATUS.md для подробностей.
+    /// </remarks>
     public class MettlerToledoParser : IScalesParser
     {
         public ScalesReading Parse(string line)

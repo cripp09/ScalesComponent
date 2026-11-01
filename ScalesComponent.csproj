@@ -40,8 +40,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\CSharp\ConsoleApp\Program.cs" />
     <Compile Include="IScales.cs" />
     <Compile Include="Models\ScalesReading.cs" />
     <Compile Include="Parsers\AndParser.cs" />
@@ -67,13 +69,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="Examples\1C\scales_test_screenshot.png" />
+    <Content Include="Examples\CSharp\ConsoleApp\scales_test_screenshot.png" />
+    <Content Include="Examples\Python\example.py" />
+    <Content Include="Examples\Python\requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include=".github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include=".github\ISSUE_TEMPLATE\new_scales.md" />
+    <None Include="COMMERCIAL.md" />
     <None Include="Docs\API.md" />
     <None Include="Docs\CAS\CI-200A.md" />
     <None Include="Docs\README.md" />
     <None Include="Docs\_templates\terminal-template.md" />
+    <None Include="CONTRIBUTING.md" />
+    <None Include="Examples\1C\README.md" />
+    <None Include="Examples\1C\ScalesComponent.epf" />
+    <None Include="Examples\CSharp\ConsoleApp\README.md" />
+    <None Include="Examples\CSharp\ConsoleApp\ScalesComponent.Examples.ConsoleApp.csproj" />
+    <None Include="Examples\Python\README.md" />
+    <None Include="Examples\README.md" />
     <None Include="README.md" />
+    <None Include="ROADMAP.md" />
+    <None Include="TESTING_STATUS.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Docs\MassaK\" />

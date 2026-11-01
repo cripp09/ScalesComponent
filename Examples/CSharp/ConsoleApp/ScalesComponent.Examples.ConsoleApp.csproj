@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>ScalesComponent.Examples.ConsoleApp</RootNamespace>
+		<AssemblyName>ScalesComponent.Examples.ConsoleApp</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Ссылка на готовую DLL вместо проекта -->
+		<ProjectReference Include="..\..\..\ScalesComponent.csproj" />
+	</ItemGroup>
+
+</Project>
