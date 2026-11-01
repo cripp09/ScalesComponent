@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ScalesComponent.Models;
+
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
-using ScalesComponent.Models;
 
 namespace ScalesComponent.Parsers
 {
@@ -57,23 +59,12 @@ namespace ScalesComponent.Parsers
                 }
             }
 
-            // После 3 совпадений - определяем тип
+            // Определяем тип после 3 совпадений
             if (_samplesCollected >= 3)
             {
-                string bestMatch = null;
-                int maxCount = 0;
-                
-                foreach (var kvp in _matchCounts)
+                if (_matchCounts.Count > 0)
                 {
-                    if (kvp.Value > maxCount)
-                    {
-                        maxCount = kvp.Value;
-                        bestMatch = kvp.Key;
-                    }
-                }
-
-                if (bestMatch != null && _parsers.ContainsKey(bestMatch))
-                {
+                    string bestMatch = _matchCounts.OrderByDescending(x => x.Value).First().Key;
                     _detectedParser = _parsers[bestMatch];
                 }
             }

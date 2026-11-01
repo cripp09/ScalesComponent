@@ -69,7 +69,15 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Docs\API.md" />
+    <None Include="Docs\CAS\CI-200A.md" />
+    <None Include="Docs\README.md" />
+    <None Include="Docs\_templates\terminal-template.md" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Docs\MassaK\" />
+    <Folder Include="Docs\MettlerToledo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
