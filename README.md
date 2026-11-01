@@ -10,7 +10,7 @@
 
 ## 📥 Скачать готовую сборку
 Если вы не хотите компилировать проект самостоятельно, скачайте готовую библиотеку:  
-👉 **[Скачать ScalesComponent.dll (Версия 1.0.0)](https://github.com/ТВОЙ_НИК/ScalesComponent/releases/latest)**
+👉 **[Скачать ScalesComponent.dll (Версия 1.0.0)](https://github.com/cripp09/ScalesComponent/releases/latest)**
 
 ---
 
