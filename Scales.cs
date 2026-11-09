@@ -82,6 +82,21 @@ namespace ScalesComponent
             try
             {
                 var reading = _portManager?.GetLastReading();
+
+                // Если кэш пустой, ждём первое значение (до 1 секунды)
+                if (reading == null)
+                {
+                    int elapsed = 0;
+                    while (elapsed < 1000)
+                    {
+                        reading = _portManager?.GetLastReading();
+                        if (reading != null) break;
+
+                        System.Threading.Thread.Sleep(50);
+                        elapsed += 50;
+                    }
+                }
+
                 return reading?.Weight ?? 0.0;
             }
             catch (Exception ex)
@@ -193,6 +208,7 @@ namespace ScalesComponent
                 case "METRISOFT": return new MetrisoftParser();
                 case "CAS": return new CasParser();
                 case "MASSAK": return new MassaKParser();
+                case "MASSA-K":return new MassaKParser();
                 case "METTLERTOLEDO": return new MettlerToledoParser();
                 case "A&D": case "AND": return new AndParser();
                 case "OHAUS": return new OhausParser();

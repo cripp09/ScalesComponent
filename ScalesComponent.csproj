@@ -48,6 +48,7 @@
     <Compile Include="Models\ScalesReading.cs" />
     <Compile Include="Parsers\AndParser.cs" />
     <Compile Include="Parsers\AutoDetectParser.cs" />
+    <Compile Include="Parsers\BaseScalesParser.cs" />
     <Compile Include="Parsers\BizerbaParser.cs" />
     <Compile Include="Parsers\CasParser.cs" />
     <Compile Include="Parsers\DigiParser.cs" />
