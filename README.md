@@ -63,6 +63,26 @@ print(f"Вес: {scales.GetStableWeight(5000)} кг")
 scales.Disconnect()
 ```
 
+### 4. Пример для Масса-К (Протокол №2)
+```bsl
+// 1С — обратите внимание на скорость 4800!
+Весы = Новый COMОбъект("ScalesComponent.Scales.1");
+Весы.Connect("COM1", 4800, "MassaK");
+Вес = Весы.GetStableWeight(5000);
+Сообщить("Вес: " + Вес + " кг");
+Весы.Disconnect();
+```
+
+### 5. Использование Масса-К (Протокол №2) в Python
+```python
+# Python — скорость 4800, тип MassaK
+import win32com.client
+scales = win32com.client.Dispatch("ScalesComponent.Scales.1")
+scales.Connect("COM1", 4800, "MassaK")
+weight = scales.GetStableWeight(5000)
+print(f"Вес: {weight} кг")
+scales.Disconnect()
+```
 ---
 
 ## 📊 Поддерживаемые типы весов
@@ -74,7 +94,7 @@ scales.Disconnect()
 | Бренд | Модель | Страна | Пример протокола | Статус |
 | :-- | :-- | :-- | :-- | :-- |
 | **CAS** | CI-200A | Южная Корея | `ST,GS,+ 123.4 kg` | ✅ Протестировано |
-| **Massa-K** | ТВ-М | Россия | `S 001234` | ✅ Протестировано |
+| **Massa-K** | Россия | Бинарный (Пр.2) | Запрос 0x45, ответ 2 байта | **4800, Even** | ✅ Протестировано |
 | **Metrisoft** | MS-H10/KN-F | Венгрия | `A/B=123.4SF` | ✅ Протестировано |
 
 ### ⚠️ Реализовано по документации (требуется проверка)
